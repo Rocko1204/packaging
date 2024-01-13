@@ -4,9 +4,9 @@
  * Licensed under the BSD 3-Clause license.
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
-import * as fs from 'fs';
-import * as os from 'os';
-import * as path from 'path';
+import * as fs from 'node:fs';
+import * as os from 'node:os';
+import * as path from 'node:path';
 import { expect } from 'chai';
 import { instantiateContext, MockTestOrgData, restoreContext, stubContext } from '@salesforce/core/lib/testSetup';
 import { Connection, Lifecycle, Messages } from '@salesforce/core';
@@ -239,6 +239,10 @@ describe('packageConvert', () => {
       HasMetadataRemoved: null,
       Id: '0Ho3i000000Gmj6YYY',
       Package2Id: '0Ho4p0000004DdnCAE',
+      Package2Name: null,
+      HasPassedCodeCoverageCheck: null,
+      CodeCoverage: null,
+      VersionNumber: null,
       Package2VersionId: '05i4p0000004H7lAAE',
       Status: 'Success',
       SubscriberPackageVersionId: null,
@@ -260,6 +264,10 @@ describe('packageConvert', () => {
           HasMetadataRemoved: null,
           Id: '0Ho3i000000Gmj6YYa',
           Package2Id: undefined,
+          Package2Name: null,
+          HasPassedCodeCoverageCheck: null,
+          CodeCoverage: null,
+          VersionNumber: null,
           Package2VersionId: undefined,
           Status: 'inProgress',
           SubscriberPackageVersionId: null,
